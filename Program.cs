@@ -123,10 +123,10 @@ namespace CalculadoraPR0
 
             Console.Clear();
 
-            Console.Write("Digite o 1ºValor: ");
+            Console.Write("Primeiro Numero: ");
             numero1 = double.Parse(Console.ReadLine());
 
-            Console.Write("Digite o 2ºValor: ");
+            Console.Write("Segundo Numero: ");
             numero2 = double.Parse(Console.ReadLine());
 
             Console.WriteLine();
