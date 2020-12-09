@@ -20,7 +20,7 @@ namespace CalculadoraPR0
             Console.ReadKey();
             Console.Clear();
             
-            Console.WriteLine(nome + " Lista de operações básicas:\nAdição\nSubtração\nMultiplicação\nDivisão");
+            Console.WriteLine(nome + " Lista de operações básicas:\nAdição\nSubtração\nMultiplicação\nDivisão\nPotencia\nRaiz");
             Console.Write("\nEnter para continuar");
             Console.ReadKey();
             Console.Clear();
@@ -44,6 +44,12 @@ namespace CalculadoraPR0
                 
                 else if(operação=="divisão")
                 Program.CalcularDivisão();
+
+                else if(operação=="potencia")
+                Program.potencia();
+
+                else if(operação=="raiz")
+                Program.raiz();
                 
                 else
                 
@@ -110,6 +116,38 @@ namespace CalculadoraPR0
             Console.Write("Segundo Numero: ");
             double div2=Convert.ToDouble(Console.ReadLine());
             Console.WriteLine($"{div1} / {div2} = " + (div1/div2));
+        }    
+        static void potencia()
+        {
+            double numero1, numero2, resultado;
+
+            Console.Clear();
+
+            Console.Write("Digite o 1ºValor: ");
+            numero1 = double.Parse(Console.ReadLine());
+
+            Console.Write("Digite o 2ºValor: ");
+            numero2 = double.Parse(Console.ReadLine());
+
+            Console.WriteLine();
+            resultado = numero1 * numero2 / 100;
+
+            Console.WriteLine($"O resultado de {numero1} * {numero2} / 100 = {resultado}%");
+            Console.WriteLine();
+        }
+
+        static void raiz()
+        {
+            double raizQuadrada, resultado;
+
+            Console.Clear();
+
+            Console.Write("Digite o Valor de Raiz Quadrada: ");
+            raizQuadrada = double.Parse(Console.ReadLine());
+            Console.WriteLine();
+
+            resultado = Math.Sqrt(raizQuadrada);
+            Console.WriteLine($"A raiz quadrada de {raizQuadrada} é = {Math.Round(resultado, 2)}");
         
         }
 
